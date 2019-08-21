@@ -6,7 +6,7 @@ def line(katz_deli)
   else
     statement = "The line is currently:"
     katz_deli.each.with_index(1) do |person, i|
-    statement << " #{i}. #{person}"
+    statement.push(" #{i}. #{person}")
     end
     puts statement
   end
@@ -21,7 +21,7 @@ def now_serving(katz_deli)
   if katz_deli.empty?
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{katz_deli.first}"
+    puts "Currently serving #{katz_deli.first}."
     katz_deli.shift
 end
 end
